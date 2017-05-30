@@ -1,3 +1,18 @@
 ﻿body
 {
+    background-color:black;
+    color:white;
+}
+
+.header{
+    font-size: 32px;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
