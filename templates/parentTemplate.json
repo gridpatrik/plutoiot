@@ -2,19 +2,23 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "storageAccountName": {
-            "type": "string"
-        }
+      "storageAccountName": {
+        "type": "string"
+      },
+      "sha": {
+          "type": "string"
+      }
     },
     "resources": [
         {
-            "apiVersion": "2017-05-10",
-            "name": "linkedTemplate",
+            "name": "linkeddeployment",
             "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2015-01-01",
+            "dependsOn": [],
             "properties": {
-                "mode": "incremental",
+                "mode": "Incremental",
                 "templateLink": {
-                    "uri": "https://raw.githubusercontent.com/gridpatrik/plutoiot/master/templates/storageAccount.json",
+                    "uri": "[concat('https://raw.githubusercontent.com/gridpatrik/plutoiot/',parameters('sha'),'/templates/storageAccount.json')]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
