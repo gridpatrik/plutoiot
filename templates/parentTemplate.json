@@ -14,7 +14,7 @@
             "properties": {
                 "mode": "incremental",
                 "templateLink": {
-                    "uri": "https://github.com/gridpatrik/plutoiot/blob/master/templates/storageAccount.json",
+                    "uri": "https://raw.githubusercontent.com/gridpatrik/plutoiot/master/templates/storageAccount.json",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
