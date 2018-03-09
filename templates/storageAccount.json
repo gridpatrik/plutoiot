@@ -4,6 +4,9 @@
   "parameters": {
     "storageAccountName": {
       "type": "string"
+    },
+    "purpose": {
+      "type": "string"
     }
   },
   "variables": {
@@ -14,6 +17,9 @@
       "name": "[parameters('storageAccountName')]",
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2015-06-15",
+      "tags": {
+          "Purpose": "[parameters('purpose')]"
+      },
       "location": "[resourceGroup().location]",
       "properties": {
         "accountType": "[variables('storageAccountType')]"
