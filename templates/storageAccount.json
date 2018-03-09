@@ -18,7 +18,8 @@
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2015-06-15",
       "tags": {
-          "Purpose": "[parameters('purpose')]"
+          "Purpose": "[parameters('purpose')]",
+          "Demo": "TS"
       },
       "location": "[resourceGroup().location]",
       "properties": {
